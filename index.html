@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
   <title>Oneness Collection</title>
@@ -10,7 +10,6 @@
       background: #f5f5f5;
     }
 
-    /* 🔥 HEADER */
     .header {
       display: flex;
       align-items: center;
@@ -19,9 +18,8 @@
       color: #fff;
     }
 
-    /* ✅ PERFECT LOGO SIZE */
     .logo {
-      width: 35px;   /* 👈 balanced size */
+      width: 35px;
       height: 35px;
       object-fit: cover;
       border-radius: 50%;
@@ -30,7 +28,6 @@
 
     .brand {
       margin-left: 10px;
-      line-height: 1.2;
     }
 
     .brand h1 {
@@ -43,7 +40,6 @@
       color: #ccc;
     }
 
-    /* SEARCH */
     .topbar {
       padding: 10px;
       background: #fff;
@@ -57,25 +53,37 @@
       border: 1px solid #ccc;
     }
 
-    /* CATEGORY */
     .categories {
       display: flex;
-      overflow-x: auto;
+      gap: 10px;
+      padding: 10px;
       background: #fff;
-      border-bottom: 1px solid #ddd;
+      overflow-x: auto;
     }
 
-    .categories div {
-      padding: 12px 16px;
-      white-space: nowrap;
+    .categories a {
+      padding: 10px 18px;
+      background: #eeeeee;
+      border-radius: 25px;
+      text-decoration: none;
+      color: black;
       font-weight: bold;
-      cursor: pointer;
+      font-size: 14px;
+      white-space: nowrap;
+      transition: 0.3s;
     }
 
-    /* SLIDER */
+    .categories a:hover {
+      background: black;
+      color: white;
+    }
+
     .slider {
-      height: 80vh;
-      overflow: hidden;
+      height: 50vh;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .slides {
@@ -86,8 +94,8 @@
 
     .slides img {
       width: 100%;
-      height: 80vh;
-      object-fit: cover;
+      height: 50vh;
+      object-fit: contain;
     }
 
     @keyframes slide {
@@ -97,16 +105,16 @@
       100% {margin-left: 0;}
     }
 
-    /* PRODUCTS */
     .products {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       padding: 25px 15px;
       gap: 15px;
     }
 
     .card {
-      width: 30%;
+      width: 45%;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
@@ -116,20 +124,18 @@
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
 
     .card img {
       width: 100%;
       height: 140px;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .name {
       padding: 10px;
       text-align: center;
       font-weight: bold;
-      color: #333;
     }
 
   </style>
@@ -137,31 +143,27 @@
 
 <body>
 
-<!-- 🔥 HEADER -->
 <div class="header">
   <img src="logo.png" class="logo">
-
   <div class="brand">
     <h1>Oneness Collection</h1>
     <span>Men's Wear</span>
   </div>
 </div>
 
-<!-- SEARCH -->
 <div class="topbar">
   <input class="search" placeholder="Search 'T-shirts'">
 </div>
 
-<!-- CATEGORY -->
+<!-- 🔥 FIXED CATEGORY -->
 <div class="categories">
-  <div>Discover</div>
-  <div>Shirts</div>
-  <div>T-Shirts</div>
-  <div>Jeans</div>
-  <div>Trousers</div>
+  <a href="#">Discover</a>
+  <a href="shirts.html">Shirts</a>
+  <a href="tshirts.html">T-Shirts</a>
+  <a href="pants.html">Jeans</a>        <!-- ✅ FIX -->
+     
 </div>
 
-<!-- SLIDER -->
 <div class="slider">
   <div class="slides">
     <img src="banner1.png">
@@ -170,28 +172,31 @@
   </div>
 </div>
 
-<!-- PRODUCTS -->
 <div class="products">
 
-  <div class="card">
+  <!-- 🔥 CLICKABLE CARDS -->
+  <a href="shirts.html" class="card">
     <img src="shirt.png">
     <div class="name">Shirts</div>
-  </div>
+  </a>
 
-  <div class="card">
+  <a href="tshirts.html" class="card">
     <img src="tshirt.png">
     <div class="name">T-Shirts</div>
-  </div>
+  </a>
 
-  <div class="card">
+  <a href="pants.html" class="card">
     <img src="pants.png">
     <div class="name">Pants</div>
-  </div>
-<div class="card">
+  </a>
+
+  <a href="shirts.html" class="card">
     <img src="combo.png">
-    <div class="name">combo</div>
-</div>
+    <div class="name">Combo Shirt</div>
+  </a>
+
 </div>
 
 </body>
 </html>
+
