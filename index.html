@@ -1,3 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oneness Collection</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f5f5f5;
+    }
+
+    /* 🔥 HEADER */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      background: #000;
+      color: #fff;
+    }
+
+    /* ✅ PERFECT LOGO SIZE */
+    .logo {
+      width: 35px;   /* 👈 balanced size */
+      height: 35px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .brand {
+      margin-left: 10px;
+      line-height: 1.2;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .brand span {
+      font-size: 11px;
+      color: #ccc;
+    }
+
+    /* SEARCH */
+    .topbar {
+      padding: 10px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .search {
+      width: 100%;
+      padding: 12px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+    }
+
+    /* CATEGORY */
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .categories div {
+      padding: 12px 16px;
+      white-space: nowrap;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* SLIDER */
+    .slider {
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 9s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% {margin-left: 0;}
+      33% {margin-left: -100%;}
+      66% {margin-left: -200%;}
+      100% {margin-left: 0;}
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: flex;
+      justify-content: space-around;
+      padding: 25px 15px;
+      gap: 15px;
+    }
+
+    .card {
+      width: 30%;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .name {
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+    }
+
+  </style>
+</head>
+
 <body>
 
 <!-- 🔥 HEADER -->
@@ -15,13 +152,13 @@
   <input class="search" placeholder="Search 'T-shirts'">
 </div>
 
-<!-- CATEGORY (FIXED CLICKABLE) -->
+<!-- CATEGORY -->
 <div class="categories">
-  <a href="#" class="cat">Discover</a>
-  <a href="shirts.html" class="cat">Shirts</a>
-  <a href="tshirts.html" class="cat">T-Shirts</a>
-  <a href="jeans.html" class="cat">Jeans</a>
-  <a href="trousers.html" class="cat">Trousers</a>
+  <div>Discover</div>
+  <div>Shirts</div>
+  <div>T-Shirts</div>
+  <div>Jeans</div>
+  <div>Trousers</div>
 </div>
 
 <!-- SLIDER -->
@@ -33,28 +170,23 @@
   </div>
 </div>
 
-<!-- PRODUCTS (CLICKABLE) -->
+<!-- PRODUCTS -->
 <div class="products">
 
-  <a href="shirts.html" class="card">
-    <img src="shirt.png">
+  <div class="card">
+    <img src="shirt.jpg">
     <div class="name">Shirts</div>
-  </a>
+  </div>
 
-  <a href="tshirts.html" class="card">
-    <img src="tshirt.png">
+  <div class="card">
+    <img src="tshirt.jpg">
     <div class="name">T-Shirts</div>
-  </a>
+  </div>
 
-  <a href="pants.html" class="card">
-    <img src="pants.png">
+  <div class="card">
+    <img src="pants.jpg">
     <div class="name">Pants</div>
-  </a>
-
-  <a href="combo.html" class="card">
-    <img src="combo.png">
-    <div class="name">Combo</div>
-  </a>
+  </div>
 
 </div>
 
